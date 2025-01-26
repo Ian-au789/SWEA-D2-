@@ -23,3 +23,6 @@ matrix_input.append(a1)
 matrix_input.append(a2)
 matrix_input.append(a3)
 
+clock90 = []
+clock180 = []
+clock270 = []
