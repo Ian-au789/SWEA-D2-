@@ -10,10 +10,16 @@ for i in range(0, N):
     row_input = list(map(int, input().split()))
     matrix_input.append(row_input)
 
+print(f"#{test_case}")
 '''
 
 N = 3
-a, b, c = 1, 2, 3
-d, e, f = 4, 5, 6
-g, h, i = 7, 8, 9
+a1 = [1, 2, 3]
+a2 = [4, 5, 6]
+a3 = [7, 8, 9]
+matrix_input = []
+
+matrix_input.append(a1)
+matrix_input.append(a2)
+matrix_input.append(a3)
 
