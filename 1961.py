@@ -26,3 +26,5 @@ matrix_input.append(a3)
 clock90 = []
 clock180 = []
 clock270 = []
+
+# 설 연휴니까 하루만 쉴게..
