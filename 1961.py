@@ -32,5 +32,5 @@ M = len(matrix_input)
 for column in range(0, M):
     print("")
     for row in range(0, M):
-        print(matrix_input[M-1-row][column])
+        print(matrix_input[M-1-row][column], end='')
 
