@@ -23,14 +23,20 @@ matrix_input.append(a1)
 matrix_input.append(a2)
 matrix_input.append(a3)
 
-clock90 = []
-clock180 = []
-clock270 = []
-
 M = len(matrix_input)
 
 for column in range(0, M):
     print("")
+
     for row in range(0, M):
         print(matrix_input[M-1-row][column], end='')
+    
+    print(" ", end = '')
 
+    for row in range(0, M):
+        print(matrix_input[M-1-column][M-1-row], end='')
+
+    print(" ", end = '')
+
+    for row in range(0, M):
+        print(matrix_input[row][M-1-column], end='')
