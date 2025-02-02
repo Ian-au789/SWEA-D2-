@@ -9,6 +9,9 @@ for i in range(0, N):
     row_input = list(map(int, input().split()))
     matrix_input.append(row_input)
 
+    ~~~
+    
+print(f"#{test_case} {check_sudoku(matrix_input)}")
 '''
 
 # set을 이용해서 중복 없이 1부터 9까지 저장. 하나라도 없으면 set의 길이가 9가 아닌 것 이용
@@ -28,10 +31,10 @@ def check_sudoku(input):
 
     # 가로 열 확인
     for i in range(0, 9):
-        test = set()
-        test.update(input[i])
+        test1 = set()
+        test1.update(input[i])
 
-        if len(test) != 9:
+        if len(test1) != 9:
             stamp += 1
     
     if stamp > 0:
@@ -41,11 +44,11 @@ def check_sudoku(input):
 
     # 세로 열 확인
     for i in range(0, 9):
-        test = set()
+        test2 = set()
         for j in range(0, 9):
-            test.add(input[j][i])
+            test2.add(input[j][i])
 
-        if len(test) != 9:
+        if len(test2) != 9:
             stamp += 1
     
     if stamp > 0:
@@ -54,23 +57,22 @@ def check_sudoku(input):
     stamp = 0       #stamp reset
 
     # 3*3 격자 확인
-    for m in range(0, 3):
-        for n in range(0, 3):
-            test = set()
+    for k in range(0, 3):
+        test3 = set()
 
-            for i in range(0, 3):
-                for j in range(0, 3):
-                    test.add(input[3*m+i][3*n+j])
+        for m in range(0, 3):
+            for n in range(0, 3):
+                test3.update(input[3*k+n][3*m+0:3*m+3])
 
-                    if len(test) != 9:
-                        stamp += 1
-            
+        if len(test3) != 9:
+            stamp += 1
+      
     if stamp > 0:
         return 0
-
 
     # 모든 테스트 통과시
     if stamp == 0:
         return 1
-
+    
+    
 print(check_sudoku(matrix_input))
