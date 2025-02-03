@@ -6,7 +6,7 @@ T = int(input())
 # 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
 for test_case in range(1, T + 1):
     N = int(input())
-    number = str(input())
+    number = input()
     
     def many_number(N, num_string):
         num_list = []
@@ -26,15 +26,19 @@ for test_case in range(1, T + 1):
             if how_many < count:
                 how_many = count
                 most_number = element
-        return most_number, how-many
+
+            elif how_many == count:
+                if most_number < element:
+                    most_number = element
+
+        return most_number, how_many
 	
     result = many_number(N, number)
-    
-    print(f'#{test_case} {many_number[0]} {many_number[1]}')
+    print(f'#{test_case} {result[0]} {result[1]}')
 '''
 
 N = 5
-input_str = "08271"
+input_str = "08971"
 
 def many_number(N, num_string):
     num_list = []
@@ -58,7 +62,7 @@ def many_number(N, num_string):
         elif how_many == count:
             if most_number < element:
                 most_number = element
-                
+
     return most_number, how_many
 
 print(many_number(N, input_str))
