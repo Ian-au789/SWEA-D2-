@@ -1,4 +1,4 @@
-# https://swexpertacademy.com/main/learn/course/lectureProblemViewer.do
+# https://swexpertacademy.com/main/learn/course/subjectDetail.do?courseId=AVuPDN86AAXw5UW6&subjectId=AWOVFCzaqeUDFAWg
 
 # 제출용 답안
 '''
